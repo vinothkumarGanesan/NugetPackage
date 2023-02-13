@@ -12,6 +12,7 @@ jobs:
      - name: test file
        run: |
            nuget install "AddGitHubAction"  -source "https://nexus.syncfusion.com/repository/nuget-hosted/"
+           echo $GITHUB_WORKSPACE
            dotnet $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/net6.0/AddGitHubAction.dll "TestingGitVinoth" "vinothkumarGanesan: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"
 
      
