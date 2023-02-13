@@ -11,7 +11,7 @@ jobs:
      - name: test file
        run: |
            dotnet nuget add source --username "vinothkumarGanesan" --password "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"  --store-password-in-clear-text --name github "https://nuget.pkg.github.com/vinothkumarGanesan/index.json"
-           nuget install 
+           nuget install "AddGitHubAction.1.0.0"
            dir $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/net6.0
            dotnet $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/net6.0/AddGitHubAction.dll "TestingGitVinoth" "vinothkumarGanesan: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"
 
