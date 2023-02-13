@@ -8,6 +8,7 @@ jobs:
    steps:
      - name: Setup NuGet.exe for use with actions
        uses: NuGet/setup-nuget@v1.1.1
+       
      - name: test file
        run: |
            nuget install "AddGitHubAction"  -source "https://nexus.syncfusion.com/repository/nuget-hosted/"
