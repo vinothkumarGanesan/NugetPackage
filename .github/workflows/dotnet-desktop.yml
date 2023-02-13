@@ -8,6 +8,6 @@ jobs:
    steps:
      - name: test file
        run: |
-           nuget install "AddGitHubAction" -source "https://nuget.pkg.github.com/vinothkumarGanesan/index.json" -UserName "vinothkumarGanesan" -Password "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"
+           nuget install "AddGitHubAction" -source  --username "vinothkumarGanesan" --password "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"  --store-password-in-clear-text --name github "https://nuget.pkg.github.com/vinothkumarGanesan/index.json"
            dir $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/netcoreapp3.1
            dotnet $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/netcoreapp3.1/Email.dll "TestingGitVinoth" "vinothkumarGanesan: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"
