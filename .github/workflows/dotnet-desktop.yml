@@ -8,6 +8,6 @@ jobs:
    steps:
      - name: test file
        run: |
-           nuget install "AddGitHubAction" -source "https://github.com/vinothkumarGanesan?tab=packages"
+           nuget install "AddGitHubAction" -source "https://github.com/users/vinothkumarGanesan/packages/nuget/package/AddGitHubAction"
            dir $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/netcoreapp3.1
            dotnet $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/netcoreapp3.1/Email.dll "TestingGitVinoth" "vinothkumarGanesan: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"
