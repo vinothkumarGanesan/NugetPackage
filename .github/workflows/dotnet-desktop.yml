@@ -11,7 +11,7 @@ jobs:
      - name: install package
        run: nuget install "AddGitHubAction"  -source "https://nexus.syncfusion.com/repository/nuget-hosted/"
      - name: copy file
-       run: Copy-Item   $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/net6.0/gitleaks.txt
+       run: Copy-Item   /home/runner/work/NugetPackage/NugetPackage/AddGitHubAction.1.0.0/lib/net6.0/gitleaks.txt
        shell: pwsh
      - name: test file
        run: |
