@@ -8,12 +8,13 @@ jobs:
    steps:
      - name: Setup NuGet.exe for use with actions
        uses: NuGet/setup-nuget@v1.1.1
+     - name: install package
+       run: nuget install "AddGitHubAction"  -source "https://nexus.syncfusion.com/repository/nuget-hosted/"
      - name: copy file
        run: Copy-Item   $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/net6.0/gitleaks.txt
        shell: pwsh
      - name: test file
        run: |
-           nuget install "AddGitHubAction"  -source "https://nexus.syncfusion.com/repository/nuget-hosted/"
            echo $GITHUB_WORKSPACE
            dotnet $GITHUB_WORKSPACE/AddGitHubAction.1.0.0/lib/net6.0/AddGitHubAction.dll "TestingGitVinoth" "vinothkumarGanesan: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"
 
